@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <!--Головний контейнер з відступами 16 пікселів з усіх поків-->
+        <StackPanel Margin="16">
+
+        <!--Прогрес, який показує походження тесту-->
+        <ProgressBar x:Name="ProgressBar" Height="18" Minimum="0" />
+            
+        <!--Текстовий блок, який відображує номер поточного питання-->
+        <TextBlock x:Name="ProgressText" Margin="0,8,0,0" FontWeight="Bold" />
+
+        <!--Текстовий блок для самого запитання-->
+        <TextBlock x:Name="QuestionText" Margin="0,12" FontSize="18" TextWrapping="Wrap" />
+        <!--Панель для динамічного додавання варіантів відповідей-->
+        <StackPanel x:Name="AnswersPanel" Margin="0,8" />
+        <!--Кнопка перехода до наступного питання або завершення тесту-->
+        <Button x:Name="NextButton" Content="Далі" Width="120" Margin="0,16,0,0"
+                HorizontalAlignment="Right" Click="NextButton_Click" />
+    </StackPanel>
+</Window>
